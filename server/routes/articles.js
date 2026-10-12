@@ -1,5 +1,6 @@
 const express = require('express');
 const multer = require('multer');
+const { persistUpload } = require('../utils/db');
 const path = require('path');
 const crypto = require('crypto');
 const jwt = require('jsonwebtoken');
@@ -10,17 +11,11 @@ const { requireAuth } = require('../middleware/auth');
 const router = express.Router();
 
 // ---- image upload setup (cover image + inline images from the rich editor) ----
-const storage = multer.diskStorage({
-  destination: (req, file, cb) => cb(null, path.join(__dirname, '..', '..', 'public', 'uploads')),
-  filename: (req, file, cb) => {
-    const ext = path.extname(file.originalname) || '.jpg';
-    cb(null, `${Date.now()}-${crypto.randomBytes(6).toString('hex')}${ext}`);
-  },
-});
+const storage = multer.memoryStorage();
 
 const upload = multer({
   storage,
-  limits: { fileSize: 6 * 1024 * 1024 }, // 6MB
+  limits: { fileSize: 4 * 1024 * 1024 }, // 4MB (سقف بدنه‌ی درخواست در Vercel حدود 4.5MB است)
   fileFilter: (req, file, cb) => {
     if (!file.mimetype.startsWith('image/')) {
       return cb(new Error('فقط فایل تصویری مجاز است.'));
@@ -110,7 +105,7 @@ router.get('/', (req, res) => {
 });
 
 // ---- protected: upload an inline image from the editor toolbar ----
-router.post('/upload-image', requireAuth, upload.single('image'), (req, res) => {
+router.post('/upload-image', requireAuth, upload.single('image'), persistUpload, (req, res) => {
   if (!req.file) return res.status(400).json({ message: 'فایلی ارسال نشده.' });
   res.json({ url: `/uploads/${req.file.filename}` });
 });
@@ -127,7 +122,7 @@ router.get('/:idOrSlug', (req, res) => {
 });
 
 // ---- protected: create article ----
-router.post('/', requireAuth, upload.single('cover'), (req, res) => {
+router.post('/', requireAuth, upload.single('cover'), persistUpload, (req, res) => {
   const { title, excerpt, tag, body, status, metaTitle, metaDescription, slug } = req.body;
 
   if (!title || !body) {
@@ -160,7 +155,7 @@ router.post('/', requireAuth, upload.single('cover'), (req, res) => {
 });
 
 // ---- protected: update article ----
-router.put('/:id', requireAuth, upload.single('cover'), (req, res) => {
+router.put('/:id', requireAuth, upload.single('cover'), persistUpload, (req, res) => {
   const articles = readArticles();
   const idx = articles.findIndex((a) => a.id === req.params.id);
   if (idx === -1) return res.status(404).json({ message: 'مقاله پیدا نشد.' });

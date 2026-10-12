@@ -1,5 +1,6 @@
 const express = require('express');
 const multer = require('multer');
+const { persistUpload } = require('../utils/db');
 const path = require('path');
 const crypto = require('crypto');
 
@@ -10,17 +11,11 @@ const { requireAuth } = require('../middleware/auth');
 const router = express.Router();
 
 // ---- image upload setup ----
-const storage = multer.diskStorage({
-  destination: (req, file, cb) => cb(null, path.join(__dirname, '..', '..', 'public', 'uploads')),
-  filename: (req, file, cb) => {
-    const ext = path.extname(file.originalname) || '.jpg';
-    cb(null, `${Date.now()}-${crypto.randomBytes(6).toString('hex')}${ext}`);
-  },
-});
+const storage = multer.memoryStorage();
 
 const upload = multer({
   storage,
-  limits: { fileSize: 5 * 1024 * 1024 }, // 5MB
+  limits: { fileSize: 4 * 1024 * 1024 }, // 4MB (سقف بدنه‌ی درخواست در Vercel حدود 4.5MB است)
   fileFilter: (req, file, cb) => {
     if (!file.mimetype.startsWith('image/')) {
       return cb(new Error('فقط فایل تصویری مجاز است.'));
@@ -248,7 +243,7 @@ router.post('/:id/buy-intent', (req, res) => {
 });
 
 // ---- protected: create product ----
-router.post('/', requireAuth, upload.single('image'), (req, res) => {
+router.post('/', requireAuth, upload.single('image'), persistUpload, (req, res) => {
   const {
     name,
     category,
@@ -297,7 +292,7 @@ router.post('/', requireAuth, upload.single('image'), (req, res) => {
 });
 
 // ---- protected: update product ----
-router.put('/:id', requireAuth, upload.single('image'), (req, res) => {
+router.put('/:id', requireAuth, upload.single('image'), persistUpload, (req, res) => {
   const products = readProducts();
   const idx = products.findIndex((p) => p.id === req.params.id);
   if (idx === -1) return res.status(404).json({ message: 'محصول پیدا نشد.' });

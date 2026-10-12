@@ -19,4 +19,12 @@ npm run dev
 
 ## دیپلوی روی Vercel
 1. پروژه رو توی GitHub بذار و import کن (Framework: Vite، بقیه‌ش خودکار از vercel.json).
-2. توی Settings → Environment Variables اینا رو بذار: `ADMIN_USERNAME`, `ADMIN_PASSWORD`, `JWT_SECRET`, `SITE_URL`
+
+
+## متغیرهای محیطی (Vercel → Settings → Environment Variables)
+`ADMIN_USERNAME`, `ADMIN_PASSWORD`, `JWT_SECRET`, `MONGODB_URI`
+(برای تتو‌روم: `SITE_URL` هم)
+
+## دیتابیس
+داده‌ها توی MongoDB Atlas ذخیره می‌شن. بار اول که سایت بالا میاد، محتوای فایل‌های `data/*.json` خودکار توی دیتابیس ریخته می‌شه.
+تصاویر آپلودشده از داشبورد هم توی همون دیتابیس (کالکشن `uploads`) نگه داشته می‌شن.

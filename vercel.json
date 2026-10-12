@@ -9,6 +9,7 @@
   "rewrites": [
     { "source": "/api/(.*)", "destination": "/api/index.js" },
     { "source": "/sitemap.xml", "destination": "/api/index.js" },
+    { "source": "/uploads/(.*)", "destination": "/api/index.js" },
     { "source": "/((?!uploads/|assets/).*)", "destination": "/index.html" }
   ]
 }
