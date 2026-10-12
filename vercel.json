@@ -1,0 +1,14 @@
+{
+  "buildCommand": "npm run build",
+  "outputDirectory": "dist",
+  "functions": {
+    "api/index.cjs": {
+      "includeFiles": "{server,data}/**"
+    }
+  },
+  "rewrites": [
+    { "source": "/api/(.*)", "destination": "/api/index.cjs" },
+    { "source": "/sitemap.xml", "destination": "/api/index.cjs" },
+    { "source": "/((?!uploads/|assets/).*)", "destination": "/index.html" }
+  ]
+}

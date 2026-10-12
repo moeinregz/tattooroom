@@ -1,0 +1,41 @@
+[
+  {
+    "id": "c-1789295038269-e119c7",
+    "phone": "09965745535",
+    "name": "moein",
+    "password": "20cde15ad3bb9f02fd40493cec8c0f10:aefc10c32a80d132fcfc10d63032f456a0e7098dfc9bb0572b6550dcbd6ff762efd4114a4257870f323dfe5bbd9287074ccf5347ad6c35a08c1ef8256a9a4157",
+    "points": 21,
+    "addresses": [
+      {
+        "id": "addr-1789295060378-8b7399",
+        "title": "dasd",
+        "province": "asd",
+        "city": "dasd",
+        "address": "asd",
+        "postalCode": "dasd",
+        "receiverPhone": "3213"
+      }
+    ],
+    "cart": [
+      {
+        "productId": "p-1788903469585-fa7089",
+        "qty": 6
+      }
+    ],
+    "history": [
+      {
+        "amount": 20,
+        "reason": "welcome",
+        "label": "امتیاز خوش‌آمدگویی",
+        "date": "2026-09-13T10:23:58.317Z"
+      },
+      {
+        "amount": 1,
+        "reason": "order",
+        "label": "خرید سفارش #c661c",
+        "date": "2026-09-13T10:24:28.547Z"
+      }
+    ],
+    "createdAt": "2026-09-13T10:23:58.317Z"
+  }
+]
