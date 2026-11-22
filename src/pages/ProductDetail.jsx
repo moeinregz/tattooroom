@@ -498,8 +498,8 @@ export default function ProductDetail() {
                 <img src={imageUrl(images[activeImage])} alt={product.name} />
               ) : (
                 <svg viewBox="0 0 100 140" fill="none">
-                  <rect x="20" y="46" width="60" height="70" rx="14" fill="#2c5578" />
-                  <rect x="32" y="20" width="36" height="34" rx="8" fill="#9fc0d6" />
+                  <rect x="20" y="46" width="60" height="70" rx="14" fill="#3a3d41" />
+                  <rect x="32" y="20" width="36" height="34" rx="8" fill="#b5b5b5" />
                 </svg>
               )}
             </div>

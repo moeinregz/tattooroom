@@ -1,25 +1,28 @@
-    /* ============ TOKENS (light-forward, Maserati blue) ============ */
-    :root {
-      --bg: #f6f6f8;
-      --bg-soft: #ececf0;
-      --bg-card: #ffffff;
-      --maserati: #2c5578;
-      --maserati-deep: #17324a;
-      --maserati-2: #3f719c;
-      --maserati-3: #6592b3;
-      --steel: #9fc0d6;
-      --steel-tint: #dcebf3;
-      --pink: #d9788f;
-      --charcoal: #33383d;
-      --muted: #6b727a;
-      --line: rgba(23, 33, 44, .09);
-      --line-blue: rgba(255, 255, 255, .16);
-      --shadow-soft: 0 30px 60px -28px rgba(15, 35, 65, .35);
-      --shadow-tight: 0 16px 32px -18px rgba(15, 35, 65, .3);
-      --ease: cubic-bezier(.22, 1, .36, 1);
-    }
+    /* ============ TOKENS (luxury charcoal — VISION palette) ============ */
+:root {
+  --bg: #242629;
+  --bg-soft: #1d1f21;
+  --bg-card: #1d1f21;
+  --deep: #17191b;
+  --maserati: #f4f4f4;
+  --maserati-deep: #17191b;
+  --maserati-2: #dddddd;
+  --maserati-3: #aaaaaa;
+  --steel: #b5b5b5;
+  --steel-tint: rgba(255, 255, 255, .07);
+  --text-soft: #cccccc;
+  --pink: #b5b5b5;
+  --charcoal: #f4f4f4;
+  --muted: #999999;
+  --line: rgba(255, 255, 255, .125);
+  --line-blue: rgba(255, 255, 255, .125);
+  --shadow-soft: none;
+  --shadow-tight: none;
+  --ease: cubic-bezier(.22, 1, .36, 1);
+  color-scheme: dark;
+}
 
-    * {
+* {
       box-sizing: border-box;
     }
 
@@ -63,7 +66,7 @@
     }
 
     ::selection {
-      background: var(--maserati);
+      background: var(--deep);
       color: #fff;
     }
 
@@ -103,7 +106,7 @@
     }
 
     .on-blue .lede {
-      color: var(--steel-tint);
+      color: var(--text-soft);
       opacity: .9;
     }
 
@@ -128,18 +131,18 @@
     }
 
     .btn-solid {
-      background: var(--maserati);
+      background: var(--deep);
       color: #fff;
       box-shadow: var(--shadow-tight);
     }
 
     .btn-solid:hover {
       transform: translateY(-3px);
-      box-shadow: 0 22px 40px -16px rgba(44, 85, 120, .45);
+      box-shadow: 0 22px 40px -16px rgba(0, 0, 0, .45);
     }
 
     .btn-light {
-      background: #fff;
+      background: var(--bg-card);
       color: var(--maserati);
       box-shadow: var(--shadow-tight);
     }
@@ -155,7 +158,7 @@
 
     .btn-ghost:hover {
       border-color: var(--maserati);
-      background: rgba(44, 85, 120, .05);
+      background: rgba(255, 255, 255, .05);
       transform: translateY(-3px);
     }
 
@@ -258,7 +261,7 @@
     .ink-cursor.big {
       width: 54px;
       height: 54px;
-      background: rgba(44, 85, 120, .1);
+      background: rgba(255, 255, 255, .06);
     }
 
     /* Dot pattern + watermark utilities for brand-card sections */
@@ -303,7 +306,7 @@
     .dots-nav i.active {
       width: 20px;
       border-radius: 5px;
-      background: #fff;
+      background: var(--bg-card);
     }
 
     /* ============ HEADER ============ */
@@ -313,7 +316,7 @@
       left: 0;
       right: 0;
       z-index: 500;
-      background: var(--maserati);
+      background: var(--deep);
       box-shadow: 0 1px 0 rgba(255, 255, 255, .06);
       transition: padding .4s var(--ease);
       padding: 20px 0;
@@ -440,7 +443,7 @@
     .burger span {
       width: 20px;
       height: 2px;
-      background: #fff;
+      background: var(--bg-card);
       border-radius: 2px;
       transition: all .4s var(--ease);
     }
@@ -722,7 +725,7 @@
       flex-wrap: wrap;
       gap: 10px;
       font-size: .84rem;
-      color: var(--steel-tint);
+      color: var(--text-soft);
       margin-bottom: 34px;
     }
 
@@ -736,7 +739,7 @@
     }
 
     .hero-quick-cats a:hover {
-      background: #fff;
+      background: var(--bg-card);
       color: var(--maserati);
       border-color: #fff;
     }
@@ -762,7 +765,7 @@
       gap: 8px;
       font-size: .84rem;
       font-weight: 600;
-      color: var(--steel-tint);
+      color: var(--text-soft);
     }
 
     .hero-trust-mini svg {
@@ -784,7 +787,7 @@
       position: relative;
       width: 100%;
       max-width: 380px;
-      background: #fff;
+      background: var(--bg-card);
       border-radius: 28px;
       padding: 22px;
       box-shadow: 0 40px 70px -30px rgba(10, 25, 45, .55);
@@ -811,7 +814,7 @@
     }
 
     .showcase-tabs button.active {
-      background: var(--maserati);
+      background: var(--deep);
       color: #fff;
       box-shadow: var(--shadow-tight);
     }
@@ -904,7 +907,7 @@
       position: absolute;
       bottom: -22px;
       left: -18px;
-      background: #fff;
+      background: var(--bg-card);
       border-radius: 18px;
       padding: 14px 20px;
       display: flex;
@@ -1015,7 +1018,7 @@
 
     .home-search-tags a:hover {
       border-color: var(--maserati);
-      background: var(--maserati);
+      background: var(--deep);
       color: #fff;
     }
 
@@ -1088,7 +1091,7 @@
 
     .cat-card2-count {
       font-size: .76rem;
-      color: var(--steel-tint);
+      color: var(--text-soft);
       opacity: .9;
     }
 
@@ -1151,7 +1154,7 @@
       font-size: .74rem;
       font-weight: 700;
       color: var(--pink);
-      background: rgba(217, 120, 143, .1);
+      background: rgba(255, 255, 255, .1);
       padding: 4px 12px;
       border-radius: 100px;
       margin-bottom: 12px;
@@ -1244,7 +1247,7 @@
 
     /* ============ MARQUEE ============ */
     .marquee-strip {
-      background: var(--maserati);
+      background: var(--deep);
       color: #fff;
       padding: 16px 0;
       overflow: hidden;
@@ -1318,7 +1321,7 @@
       position: absolute;
       bottom: -26px;
       left: -26px;
-      background: var(--maserati);
+      background: var(--deep);
       color: #fff;
       padding: 22px 26px;
       border-radius: 20px;
@@ -1343,7 +1346,7 @@
 
     .about-badge span {
       font-size: .8rem;
-      color: var(--steel-tint);
+      color: var(--text-soft);
       opacity: .9;
     }
 
@@ -1424,7 +1427,7 @@
       width: 54px;
       height: 54px;
       border-radius: 15px;
-      background: #fff;
+      background: var(--bg-card);
       display: flex;
       align-items: center;
       justify-content: center;
@@ -1445,7 +1448,7 @@
 
     .svc-card p {
       font-size: .93rem;
-      color: var(--steel-tint);
+      color: var(--text-soft);
       opacity: .9;
       margin: 0;
     }
@@ -1508,7 +1511,7 @@
     }
 
     .prod-card {
-      background: #fff;
+      background: var(--bg-card);
       border-radius: 22px;
       overflow: hidden;
       transition: transform .5s var(--ease), box-shadow .5s var(--ease);
@@ -1688,7 +1691,7 @@
     }
 
     .testi-dots button.active {
-      background: var(--maserati);
+      background: var(--deep);
       width: 26px;
       border-radius: 6px;
     }
@@ -1742,7 +1745,7 @@
 
     .cinfo-row span {
       font-size: .86rem;
-      color: var(--steel-tint);
+      color: var(--text-soft);
       opacity: .85;
     }
 
@@ -1769,7 +1772,7 @@
     }
 
     .social-row a:hover {
-      background: #fff;
+      background: var(--bg-card);
     }
 
     .social-row a:hover svg {
@@ -1783,7 +1786,7 @@
     }
 
     .form-card {
-      background: #fff;
+      background: var(--bg-card);
       border-radius: 24px;
       padding: 36px;
       box-shadow: 0 30px 60px -24px rgba(0, 0, 0, .4);
@@ -1844,7 +1847,7 @@
 
     /* ============ FOOTER ============ */
     footer {
-      background: var(--maserati);
+      background: var(--deep);
       color: #fff;
       padding: 70px 0 30px;
     }
@@ -1857,7 +1860,7 @@
     }
 
     .foot-brand p {
-      color: var(--steel-tint);
+      color: var(--text-soft);
       opacity: .8;
       font-size: .92rem;
       max-width: 38ch;
@@ -1878,7 +1881,7 @@
 
     .foot-col a {
       font-size: .9rem;
-      color: var(--steel-tint);
+      color: var(--text-soft);
       opacity: .85;
       transition: opacity .3s;
     }
@@ -1895,7 +1898,7 @@
       flex-wrap: wrap;
       gap: 12px;
       font-size: .82rem;
-      color: var(--steel-tint);
+      color: var(--text-soft);
       opacity: .75;
     }
 
@@ -2194,7 +2197,7 @@
 /* ---- generic page hero (used by Shop / Product / Dashboard login) ---- */
 .page-hero {
   padding: 150px 0 50px;
-  background: var(--maserati);
+  background: var(--deep);
 }
 
 .page-hero .wrap {
@@ -2207,13 +2210,13 @@
 }
 
 .page-hero p {
-  color: var(--steel-tint);
+  color: var(--text-soft);
   margin-top: 10px;
   max-width: 60ch;
 }
 
 .crumbs {
-  color: var(--steel-tint);
+  color: var(--text-soft);
   opacity: .85;
   font-size: .92rem;
   margin-bottom: 14px;
@@ -2253,7 +2256,7 @@
 .chip.active,
 .chip:hover {
   border-color: var(--maserati);
-  background: var(--maserati);
+  background: var(--deep);
   color: #fff;
 }
 
@@ -2446,9 +2449,9 @@
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  background: rgba(217, 120, 143, .1);
+  background: rgba(255, 255, 255, .1);
   color: var(--pink);
-  border: 1px solid rgba(217, 120, 143, .25);
+  border: 1px solid rgba(255, 255, 255, .25);
   padding: 6px 12px;
   border-radius: 100px;
   font-size: .8rem;
@@ -2472,7 +2475,7 @@
 }
 
 .pd-stock.out {
-  background: rgba(217, 120, 143, .15);
+  background: rgba(255, 255, 255, .15);
   color: var(--pink);
 }
 
@@ -2693,7 +2696,7 @@
   width: 42px;
   height: 42px;
   border-radius: 50%;
-  background: var(--maserati);
+  background: var(--deep);
   color: #fff;
   display: flex;
   align-items: center;
@@ -2968,7 +2971,7 @@
   color: var(--line);
 }
 
-.star-rating .star.filled { color: #f5a623; }
+.star-rating .star.filled { color: #d9d9d9; }
 .star-rating .star.interactive { cursor: pointer; transition: transform .12s var(--ease); }
 .star-rating .star.interactive:hover { transform: scale(1.15); }
 
@@ -2999,7 +3002,7 @@
 .dash-login-card {
   width: 100%;
   max-width: 400px;
-  background: #fff;
+  background: var(--bg-card);
   border-radius: 26px;
   box-shadow: var(--shadow-soft);
   padding: 44px 36px;
@@ -3037,7 +3040,7 @@
   border: 1.5px solid var(--line);
   font-family: inherit;
   font-size: .95rem;
-  background: #fff;
+  background: var(--bg-card);
   color: var(--charcoal);
   outline: none;
   transition: border-color .3s;
@@ -3055,7 +3058,7 @@
 }
 
 .form-error {
-  background: rgba(217, 120, 143, .12);
+  background: rgba(255, 255, 255, .12);
   color: var(--pink);
   padding: 12px 16px;
   border-radius: 12px;
@@ -3080,7 +3083,7 @@
   left: 0;
   right: 0;
   z-index: 400;
-  background: var(--maserati);
+  background: var(--deep);
   padding: 18px 0;
 }
 
@@ -3129,7 +3132,7 @@
 }
 
 .dash-table-wrap {
-  background: #fff;
+  background: var(--bg-card);
   border-radius: 20px;
   overflow: hidden;
   box-shadow: var(--shadow-tight);
@@ -3181,11 +3184,11 @@ table.dash-table {
 
 .icon-btn.danger {
   color: var(--pink);
-  border-color: rgba(217, 120, 143, .4);
+  border-color: rgba(255, 255, 255, .4);
 }
 
 .icon-btn.danger:hover {
-  background: rgba(217, 120, 143, .1);
+  background: rgba(255, 255, 255, .1);
 }
 
 .icon-btn:hover {
@@ -3194,7 +3197,7 @@ table.dash-table {
 }
 
 .dash-form-card {
-  background: #fff;
+  background: var(--bg-card);
   border-radius: 22px;
   padding: 36px;
   box-shadow: var(--shadow-tight);
@@ -3258,7 +3261,7 @@ table.dash-table {
 }
 
 .status-badge.draft {
-  background: rgba(217, 120, 143, .12);
+  background: rgba(255, 255, 255, .12);
   color: var(--pink);
 }
 
@@ -3350,7 +3353,7 @@ table.dash-table {
   display: flex;
   gap: 18px;
   margin-top: 14px;
-  color: var(--steel-tint);
+  color: var(--text-soft);
   font-size: .88rem;
 }
 
@@ -3546,7 +3549,7 @@ table.dash-table {
 }
 
 .account-nav a.active {
-  background: var(--maserati);
+  background: var(--deep);
   color: #fff;
 }
 
@@ -3679,7 +3682,7 @@ table.dash-table {
   color: var(--maserati);
 }
 
-.status-badge.order-status-pending { background: rgba(217, 120, 143, .12); color: var(--pink); }
+.status-badge.order-status-pending { background: rgba(255, 255, 255, .12); color: var(--pink); }
 .status-badge.order-status-confirmed { background: rgba(63, 113, 156, .14); color: var(--maserati); }
 .status-badge.order-status-shipped { background: rgba(159, 192, 214, .3); color: var(--maserati-deep); }
 .status-badge.order-status-delivered { background: rgba(80, 170, 120, .14); color: #2f8f5e; }
@@ -3716,7 +3719,7 @@ table.dash-table {
   border: 1.5px solid var(--line);
   font-family: inherit;
   font-size: .84rem;
-  background: #fff;
+  background: var(--bg-card);
 }
 
 /* ---- addresses ---- */
@@ -3865,7 +3868,7 @@ table.dash-table {
   width: 22px;
   height: 22px;
   border-radius: 50%;
-  background: #fff;
+  background: var(--bg-card);
   font-weight: 800;
   color: var(--charcoal);
   box-shadow: var(--shadow-tight);
@@ -3890,7 +3893,7 @@ table.dash-table {
 
 .cart-remove:hover {
   color: var(--pink);
-  background: rgba(217, 120, 143, .1);
+  background: rgba(255, 255, 255, .1);
 }
 
 .cart-remove svg {
@@ -3968,4 +3971,273 @@ table.dash-table {
     left: 10px;
   }
   .cart-item { position: relative; }
+}
+
+/* ============================================================ */
+/* ====== LUXURY CHARCOAL LAYER — matches VISION eyewear ====== */
+/* ============================================================ */
+/* Palette: #242629 page · #1d1f21 panels · #17191b deep · #f4f4f4 text
+   #ccc/#aaa/#999 soft text · #b5b5b5 tag · rgba(255,255,255,.125) lines  */
+
+body { background: #242629; color: #f4f4f4; font-weight: 400; }
+::selection { background: #f4f4f4; color: #17191b; }
+:focus-visible { outline: 1px solid #b5b5b5; outline-offset: 3px; }
+::-webkit-scrollbar { width: 10px; height: 10px; }
+::-webkit-scrollbar-track { background: #1d1f21; }
+::-webkit-scrollbar-thumb { background: #3a3d41; }
+
+h1, h2, h3 { font-weight: 500; font-stretch: normal; letter-spacing: 0; line-height: 1.4; }
+.h-display { font-size: clamp(2.8rem, 6vw, 5.2rem); line-height: 1.4; }
+.h-section { font-size: clamp(1.7rem, 3.2vw, 2.4rem); }
+.lede { color: #ccc; line-height: 2.2; font-size: .95rem; }
+p { line-height: 2.1; }
+
+.grain { opacity: .035; mix-blend-mode: screen; }
+.ink-cursor { border-color: #b5b5b5; mix-blend-mode: normal; }
+.ink-cursor.big { background: rgba(255, 255, 255, .06); }
+
+/* ---------- buttons: square, hairline, fill on hover ---------- */
+.btn, .btn-solid, .btn-light, .btn-ghost, .btn-ghost-blue, .btn-pill-dark {
+  border-radius: 0;
+  border: 1px solid #eee;
+  background: transparent;
+  color: #fff;
+  box-shadow: none;
+  padding: 13px 35px;
+  font-size: .82rem;
+  font-weight: 500;
+  transition: background .3s, color .3s, border-color .3s;
+}
+.btn:hover, .btn-solid:hover, .btn-light:hover, .btn-ghost:hover, .btn-ghost-blue:hover, .btn-pill-dark:hover {
+  background: #fff; color: #222; border-color: #fff; transform: none; box-shadow: none;
+}
+.btn-ghost, .btn-ghost-blue { border-color: rgba(255, 255, 255, .25); }
+
+/* ---------- header ---------- */
+header {
+  height: 85px; padding: 0; display: flex; align-items: center;
+  background: transparent; border-bottom: 1px solid #ffffff20; box-shadow: none;
+  transition: height .4s var(--ease), background .4s, backdrop-filter .4s;
+}
+header .nav-inner { width: 100%; }
+header.scrolled { height: 70px; padding: 0; background: rgba(23, 25, 27, .92); backdrop-filter: blur(10px); box-shadow: none; }
+.brand-mark { display: none; }
+.brand-name { font-size: 1.7rem; font-weight: 700; letter-spacing: 5px; text-transform: uppercase; color: #f4f4f4; }
+.brand-name span { color: #f4f4f4; }
+.brand-name::after { content: '.'; }
+.nav-links { gap: 38px; }
+.nav-links a { font-size: .82rem; font-weight: 400; color: #ddd; opacity: 1; }
+.nav-links a::after { height: 1px; background: #b5b5b5; }
+.nav-phone { font-size: .82rem; font-weight: 400; color: #ddd; }
+.nav-phone svg { color: #b5b5b5; }
+.nav-badge { background: #f4f4f4; color: #17191b; }
+.burger { border-radius: 0; border: 1px solid #ffffff30; }
+.mobile-menu { background: #17191b; }
+.mobile-menu a { font-size: 1.5rem; font-weight: 500; }
+.mobile-menu li { border-bottom: 1px solid #ffffff15; }
+.mm-phone { color: #ccc; }
+.mm-social a { border-radius: 0; border-color: #ffffff30; }
+.mm-account-links a { color: #f4f4f4; font-weight: 500; }
+
+/* ---------- section scaffolding ---------- */
+section { padding: 110px 0; }
+.light-sec { background: #242629; }
+.light-sec.alt { background: #1d1f21; }
+.section-head { margin-bottom: 45px; }
+.section-head .kicker, .on-blue .kicker, .home-search-kicker, .pd-category {
+  color: #b5b5b5; font-weight: 400; font-size: .8rem;
+}
+.hero-tag { border-radius: 0; border: 1px solid #ffffff30; color: #b5b5b5; font-weight: 400; font-size: .78rem; }
+.hero-tag i { background: #b5b5b5; border-radius: 0; width: 5px; height: 5px; }
+
+/* ---------- hero (dark photo-style panel, left/right fade) ---------- */
+.hero-section {
+  min-height: 100vh; display: flex; align-items: center; padding: 150px 0 90px;
+  background:
+    linear-gradient(270deg, #17191b 0%, rgba(23, 25, 27, .56) 45%, rgba(23, 25, 27, 0) 100%),
+    radial-gradient(ellipse 55% 70% at 22% 45%, rgba(255, 255, 255, .08), transparent 70%),
+    url('/hero.jpg') center / cover no-repeat,
+    #17191b;
+}
+.hero-section .wrap { width: 100%; }
+.hero-bg, .hero-blob, .dot-pattern { display: none; }
+.hero-copy h1 { font-weight: 500; }
+.hero-copy h1 em { color: #aaa; font-style: normal; }
+.hero-quick-cats a { border-radius: 0; border-color: #ffffff30; color: #ddd; font-weight: 400; }
+.hero-quick-cats a:hover { background: #fff; color: #222; }
+.hero-trust-mini { border-top: 1px solid #ffffff20; }
+.hero-trust-mini span { color: #ccc; font-weight: 400; }
+.hero-trust-mini svg { color: #b5b5b5; }
+
+.showcase-card { background: rgba(29, 31, 33, .92); border: 1px solid #ffffff20; border-radius: 0; box-shadow: none; backdrop-filter: blur(6px); }
+.showcase-tabs { background: transparent; border-radius: 0; padding: 0; gap: 0; border-bottom: 1px solid #ffffff20; }
+.showcase-tabs button { border-radius: 0; font-weight: 400; color: #999; padding: 11px 6px; border-bottom: 1px solid transparent; margin-bottom: -1px; }
+.showcase-tabs button.active { background: transparent; color: #f4f4f4; box-shadow: none; border-bottom-color: #f4f4f4; }
+.showcase-item { border-bottom-color: #ffffff15; }
+.showcase-thumb { border-radius: 0; background: #17191b; }
+.showcase-name { color: #f4f4f4; font-weight: 400; }
+.showcase-price { color: #b5b5b5; font-weight: 500; }
+.hero-float-chip { background: #17191b; border: 1px solid #ffffff20; border-radius: 0; box-shadow: none; }
+.hero-float-chip b { color: #f4f4f4; font-weight: 500; }
+
+/* ---------- search ---------- */
+.home-search-box { background: rgba(23, 25, 27, .7); border: 1px solid #ffffff30; border-radius: 0; box-shadow: none; padding: 6px 6px 6px 18px; }
+.home-search-box input { color: #f4f4f4; }
+.home-search-box input::placeholder, .shop-search input::placeholder, .field input::placeholder, .field textarea::placeholder { color: #777; }
+.home-search-box .btn { padding: 11px 28px; }
+.home-search-tags a { border-radius: 0; color: #ddd; font-weight: 400; }
+.home-search-tags a:hover { background: #fff; color: #222; border-color: #fff; }
+
+/* ---------- marquee ---------- */
+.marquee-strip { background: #17191b; border-top: 1px solid #ffffff15; border-bottom: 1px solid #ffffff15; padding: 18px 0; }
+.marquee-track span { font-weight: 300; color: #aaa; font-size: .92rem; }
+.marquee-track span i { background: #b5b5b5; border-radius: 0; width: 4px; height: 4px; opacity: .5; }
+
+/* ---------- categories ---------- */
+.cat-card2 {
+  border: 1px solid #ffffff20; border-radius: 0; background: #1d1f21; box-shadow: none; padding: 34px 16px;
+}
+.cat-card2:hover { transform: none; border-color: #ffffff60; background: #17191b; box-shadow: none; }
+.cat-card2-icon { border-radius: 0; background: transparent; border: 1px solid #ffffff25; }
+.cat-card2-icon svg { color: #ddd; }
+.cat-card2-name { font-weight: 500; }
+.cat-card2-count { color: #999; }
+
+/* ---------- brand-card = flat charcoal band ---------- */
+.brand-card { background: #1d1f21; border: 1px solid #ffffff15; border-radius: 0; box-shadow: none; padding: 70px 56px; }
+.card-peek, .about-ring-deco { display: none; }
+.watermark { color: rgba(255, 255, 255, .025); font-weight: 700; letter-spacing: 0; }
+.light-sec.alt .brand-card { background: #242629; }
+
+/* ---------- products ---------- */
+.prod-card, .prod-card:hover { background: transparent; border-radius: 0; box-shadow: none; transform: none; }
+.prod-media { border-radius: 0; background: #17191b; }
+.prod-media img, .pd-media img { filter: grayscale(30%); transition: filter .5s, transform .5s; }
+.prod-card:hover .prod-media img, .pd-media:hover img { filter: grayscale(0); transform: scale(1.015); }
+.prod-media svg { opacity: .55; }
+.prod-tag { background: #f4f4f4; color: #17191b; border-radius: 0; font-weight: 500; }
+.prod-body { padding: 18px 0 0; }
+.prod-body h3 { font-size: 1rem; font-weight: 400; color: #f4f4f4; }
+.prod-body p { color: #999; font-size: .8rem; }
+.prod-price { color: #ddd; font-weight: 500; }
+.prod-cta { color: #b5b5b5; font-weight: 400; }
+.prod-like { background: rgba(23, 25, 27, .75); border-radius: 0; box-shadow: none; color: #ccc; }
+.prod-like.active { color: #fff; }
+.prod-add-btn { padding: 10px 14px; }
+
+/* ---------- about ---------- */
+.about-frame { border-radius: 0; box-shadow: none; background: #17191b; border: 1px solid #ffffff15; }
+.about-badge { background: #17191b; border: 1px solid #ffffff20; border-radius: 0; box-shadow: none; }
+.about-badge svg { color: #b5b5b5; }
+.about-badge b { font-weight: 500; }
+.about-copy p, .about-list p { color: #aaa; }
+.about-list svg { color: #b5b5b5; }
+.about-list b { font-weight: 500; }
+
+/* ---------- services ---------- */
+.svc-card { background: transparent; border: 1px solid #ffffff15; border-radius: 0; backdrop-filter: none; }
+.svc-card:hover { background: #17191b; transform: none; border-color: #ffffff40; }
+.svc-icon { background: transparent; border: 1px solid #ffffff25; border-radius: 0; }
+.svc-icon svg { color: #ddd; }
+.svc-card h3 { font-weight: 500; font-size: 1.1rem; }
+.svc-card p { color: #aaa; }
+.svc-num { color: #777; opacity: 1; font-weight: 400; }
+
+/* ---------- trust / features ---------- */
+.trust-section-card { background: #1d1f21; border: 1px solid #ffffff15; border-radius: 0; }
+.trust-section-icon { background: transparent; border: 1px solid #ffffff25; border-radius: 0; }
+.trust-section-icon svg, .feat-item svg { color: #b5b5b5; }
+.feat-strip, .feat-item { border-color: #ffffff15; }
+.feat-item b { font-weight: 500; }
+
+/* ---------- testimonials ---------- */
+.testi-quote svg, .testi-stars { color: #b5b5b5; }
+.testi-text { font-weight: 400; }
+.testi-avatar { background: #17191b; border: 1px solid #ffffff25; color: #ddd; font-weight: 500; }
+.testi-dots button { background: #ffffff30; border-radius: 0; }
+.testi-dots button.active { background: #f4f4f4; border-radius: 0; }
+
+/* ---------- contact + forms ---------- */
+.cinfo-row .ic, .social-row a { border-radius: 0; background: transparent; border: 1px solid #ffffff25; }
+.social-row a:hover { background: #fff; }
+.social-row a:hover svg { color: #17191b; }
+.form-card { background: #17191b; border: 1px solid #ffffff15; border-radius: 0; box-shadow: none; }
+.light-sec.alt .form-card { background: #1d1f21; }
+.field label { color: #999; font-weight: 400; }
+.field input, .field select, .field textarea,
+.review-form-fields input, .review-form-fields textarea, .profile-form-fields input, .dash-table select {
+  background: #242629; border: 1px solid #ffffff20; border-radius: 0; color: #f4f4f4;
+}
+.field input:focus, .field select:focus, .field textarea:focus { border-color: #b5b5b5; }
+.form-error { border-radius: 0; background: rgba(255, 255, 255, .06); color: #ddd; }
+.form-success { border-radius: 0; background: rgba(255, 255, 255, .06); color: #cfcfcf; }
+select option { background: #1d1f21; color: #f4f4f4; }
+
+/* ---------- articles ---------- */
+.article-card { background: #1d1f21; border: 1px solid #ffffff15; border-radius: 0; }
+.article-card:hover { transform: none; box-shadow: none; border-color: #ffffff40; }
+.article-cover { background: #17191b; }
+.article-cover img { filter: grayscale(30%); transition: filter .5s; }
+.article-card:hover .article-cover img { filter: grayscale(0); }
+.article-tag, .post-tag { background: transparent; border: 1px solid #ffffff25; color: #b5b5b5; border-radius: 0; font-weight: 400; }
+.article-body h3 { font-weight: 500; }
+.article-meta { border-top-color: #ffffff15; }
+.prose blockquote { background: #1d1f21; border-radius: 0; }
+
+/* ---------- inner pages ---------- */
+.page-hero { background: #1d1f21; border-bottom: 1px solid #ffffff15; }
+.page-hero h1 { font-weight: 500; }
+.chip, .shop-search { border-radius: 0; border-color: #ffffff25; font-weight: 400; color: #ddd; }
+.chip.active, .chip:hover { background: #f4f4f4; color: #17191b; border-color: #f4f4f4; }
+.pd-media, .pd-thumb { border-radius: 0; background: #17191b; box-shadow: none; }
+.pd-like-btn { background: rgba(23, 25, 27, .8); color: #ccc; border-radius: 0; box-shadow: none; }
+.pd-stock { border-radius: 0; }
+.pd-stock.in { background: rgba(255, 255, 255, .07); color: #ddd; }
+.pd-stock.out { background: rgba(255, 255, 255, .04); color: #999; }
+.pd-points-chip, .tag-chip, .pd-payment-item, .pd-call-banner { border-radius: 0; }
+.pd-call-banner, .tag-chip { color: #ccc; }
+.pd-quickspec-item, .pd-trust-row, .pd-warranty-box, .desc-toc, .review-summary, .review-item,
+.cart-item, .cart-summary, .account-nav, .account-card, .auth-card, .order-row, .address-card { border-radius: 0; box-shadow: none; }
+.pd-tabs-nav button.active { color: #f4f4f4; border-bottom-color: #f4f4f4; }
+.spec-table tr:nth-child(even) { background: #1d1f21; }
+.bar-track { background: #17191b; border-radius: 0; }
+.bar-fill { background: #b5b5b5; }
+.review-avatar, .profile-avatar { background: #17191b; color: #ddd; border: 1px solid #ffffff25; }
+.review-like-btn { border-radius: 0; }
+.review-like-btn.active { background: rgba(255, 255, 255, .07); color: #f4f4f4; border-color: #f4f4f4; }
+.cart-qty { background: #17191b; border-radius: 0; }
+.cart-qty button { background: #2c2f33; border-radius: 0; box-shadow: none; }
+.cart-item-media { background: #17191b; border-radius: 0; }
+.account-nav a.active { background: #f4f4f4; color: #17191b; }
+.account-nav a:hover, .account-nav .account-logout:hover { background: rgba(255, 255, 255, .06); }
+.account-nav a, .account-nav .account-logout, .nav-icon-btn { border-radius: 0; }
+.nav-icon-btn:hover { background: rgba(255, 255, 255, .08); }
+
+/* ---------- dashboard ---------- */
+.dash-shell { background: #1d1f21; }
+.dash-topbar { background: #17191b; border-bottom: 1px solid #ffffff15; }
+.dash-login-card, .dash-form-card, .dash-table-wrap { background: #242629; border: 1px solid #ffffff15; border-radius: 0; box-shadow: none; }
+.dash-table th { background: #1d1f21; }
+.icon-btn { border-radius: 0; }
+.rich-editor, .rich-toolbar, .image-drop { border-radius: 0; }
+.rich-toolbar { background: #1d1f21; }
+.rich-toolbar button:hover { background: rgba(255, 255, 255, .08); }
+
+/* ---------- footer ---------- */
+footer { background: #17191b; border-top: 1px solid #ffffff15; padding: 70px 0 32px; }
+.foot-brand p { color: #999; opacity: 1; }
+.foot-col b { font-weight: 500; }
+.foot-col a { color: #999; opacity: 1; }
+.foot-col a:hover { color: #f4f4f4; }
+.foot-bottom { border-top-color: #ffffff15; color: #777; opacity: 1; }
+
+/* ---------- responsive ---------- */
+@media (max-width: 860px) {
+  header, header.scrolled { height: 70px; }
+  .brand-name { font-size: 1.3rem; letter-spacing: 4px; }
+  .hero-section { min-height: auto; }
+}
+@media (max-width: 640px) {
+  section { padding: 75px 0; }
+  .brand-card { padding: 40px 22px; }
 }

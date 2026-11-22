@@ -281,8 +281,8 @@ export default function Home() {
                           <img src={imageUrl(p.image)} alt={p.name} />
                         ) : (
                           <svg viewBox="0 0 100 140" fill="none">
-                            <rect x="20" y="46" width="60" height="70" rx="14" fill="#2c5578" />
-                            <rect x="32" y="20" width="36" height="34" rx="8" fill="#9fc0d6" />
+                            <rect x="20" y="46" width="60" height="70" rx="14" fill="#3a3d41" />
+                            <rect x="32" y="20" width="36" height="34" rx="8" fill="#b5b5b5" />
                           </svg>
                         )}
                       </span>
@@ -382,18 +382,18 @@ export default function Home() {
               <svg viewBox="0 0 400 500" xmlns="http://www.w3.org/2000/svg">
                 <defs>
                   <linearGradient id="skinGrad" x1="0" y1="0" x2="1" y2="1">
-                    <stop offset="0%" stopColor="#dcebf3" />
-                    <stop offset="100%" stopColor="#7fa4bd" />
+                    <stop offset="0%" stopColor="#3a3d41" />
+                    <stop offset="100%" stopColor="#17191b" />
                   </linearGradient>
                 </defs>
                 <rect width="400" height="500" fill="url(#skinGrad)" />
-                <g fill="none" stroke="#2c5578" strokeWidth="1.4" opacity=".5">
+                <g fill="none" stroke="#b5b5b5" strokeWidth="1.4" opacity=".5">
                   <path d="M120,340 C110,300 130,260 100,230 C140,240 150,190 130,160 C170,175 190,130 175,90 C210,110 230,80 220,50" />
-                  <circle cx="220" cy="50" r="4" fill="#2c5578" />
+                  <circle cx="220" cy="50" r="4" fill="#b5b5b5" />
                   <path d="M260,380 C290,360 300,320 270,300 C300,290 310,250 280,230" />
-                  <circle cx="280" cy="230" r="4" fill="#d9788f" />
+                  <circle cx="280" cy="230" r="4" fill="#b5b5b5" />
                 </g>
-                <g stroke="#2c5578" strokeWidth="1" opacity=".12">
+                <g stroke="#b5b5b5" strokeWidth="1" opacity=".12">
                   <line x1="0" y1="120" x2="400" y2="120" />
                   <line x1="0" y1="240" x2="400" y2="240" />
                   <line x1="0" y1="360" x2="400" y2="360" />
