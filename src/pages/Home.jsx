@@ -316,18 +316,18 @@ export default function Home() {
               <svg viewBox="0 0 400 500" xmlns="http://www.w3.org/2000/svg">
                 <defs>
                   <linearGradient id="skinGrad" x1="0" y1="0" x2="1" y2="1">
-                    <stop offset="0%" stopColor="#3a3d41" />
-                    <stop offset="100%" stopColor="#17191b" />
+                    <stop offset="0%" stopColor="#e4e5e7" />
+                    <stop offset="100%" stopColor="#a9abaf" />
                   </linearGradient>
                 </defs>
                 <rect width="400" height="500" fill="url(#skinGrad)" />
-                <g fill="none" stroke="#b5b5b5" strokeWidth="1.4" opacity=".5">
+                <g fill="none" stroke="#242629" strokeWidth="1.4" opacity=".5">
                   <path d="M120,340 C110,300 130,260 100,230 C140,240 150,190 130,160 C170,175 190,130 175,90 C210,110 230,80 220,50" />
-                  <circle cx="220" cy="50" r="4" fill="#b5b5b5" />
+                  <circle cx="220" cy="50" r="4" fill="#242629" />
                   <path d="M260,380 C290,360 300,320 270,300 C300,290 310,250 280,230" />
-                  <circle cx="280" cy="230" r="4" fill="#b5b5b5" />
+                  <circle cx="280" cy="230" r="4" fill="#242629" />
                 </g>
-                <g stroke="#b5b5b5" strokeWidth="1" opacity=".12">
+                <g stroke="#242629" strokeWidth="1" opacity=".12">
                   <line x1="0" y1="120" x2="400" y2="120" />
                   <line x1="0" y1="240" x2="400" y2="240" />
                   <line x1="0" y1="360" x2="400" y2="360" />
