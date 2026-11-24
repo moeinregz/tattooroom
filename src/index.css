@@ -4066,8 +4066,8 @@ section { padding: 110px 0; }
 .prod-card { background: transparent; border-radius: 0; box-shadow: none; }
 .prod-card:hover { transform: none; }
 .prod-media { border-radius: 0; background: #17191b; }
-.prod-media img, .pd-media img, .article-cover img, .showcase-thumb img, .cart-item-media img, .pd-thumb img, .dash-thumb { filter: grayscale(1) brightness(.95) contrast(1.05); transition: filter .5s, transform .5s; }
-.prod-card:hover .prod-media img, .pd-media:hover img, .article-card:hover .article-cover img { filter: grayscale(.5); transform: scale(1.015); }
+.prod-media img, .pd-media img, .article-cover img, .showcase-thumb img, .cart-item-media img, .pd-thumb img, .dash-thumb { filter: none; transition: transform .5s; }
+.prod-card:hover .prod-media img, .pd-media:hover img, .article-card:hover .article-cover img { filter: none; transform: scale(1.015); }
 .prod-tag { background: #fff; color: #242629; border-radius: 0; font-weight: 500; }
 .prod-body { padding: 18px 0 0; }
 .prod-body h3 { font-weight: 400; font-size: 1rem; color: #fff; }
